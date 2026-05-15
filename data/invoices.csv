@@ -1,0 +1,11 @@
+invoice_no,client_name,amount_due,due_date,contact_email,followup_count,payment_link
+INV-1001,Acme Corp,5200.00,2026-05-10,billing@acmecorp.com,0,https://pay.example.com/INV-1001
+INV-1002,GlobalTech Solutions,12800.50,2026-05-06,accounts@globaltech.io,1,https://pay.example.com/INV-1002
+INV-1003,BrightMind Consulting,3400.00,2026-04-30,finance@brightmind.co,2,https://pay.example.com/INV-1003
+INV-1004,Nexus Retail Ltd,8900.75,2026-04-23,payments@nexusretail.com,3,https://pay.example.com/INV-1004
+INV-1005,PeakFlow Logistics,21500.00,2026-04-10,ar@peakflow.net,4,https://pay.example.com/INV-1005
+INV-1006,Sunrise Ventures,6100.00,2026-05-20,billing@sunriseventures.in,0,https://pay.example.com/INV-1006
+INV-1007,Quantum Analytics,9300.25,2026-05-07,accounts@quantumanalytics.com,1,https://pay.example.com/INV-1007
+INV-1008,Orion Systems,4750.00,2026-04-28,finance@orionsys.com,2,https://pay.example.com/INV-1008
+INV-1009,BlueSky Media,15200.00,2026-04-20,billing@blueskymedia.co,3,https://pay.example.com/INV-1009
+INV-1010,Vertex Dynamics,33600.80,2026-04-05,ap@vertexdynamics.com,5,https://pay.example.com/INV-1010
