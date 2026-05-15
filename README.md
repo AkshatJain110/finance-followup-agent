@@ -1,10 +1,10 @@
-# Finance Follow-Up Email Agent 💼
+# Finance Follow-Up Email Agent 
 
 > An AI-powered prototype that automatically detects overdue invoices, determines escalation urgency, and generates personalized follow-up emails using GPT-4o-mini — all without sending a single real email.
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 Finance teams spend hours manually writing and sending payment follow-up emails. This agent automates the entire workflow:
 
@@ -17,26 +17,26 @@ Finance teams spend hours manually writing and sending payment follow-up emails.
 
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Details |
 |---|---|
-| 📥 Data Ingestion | Reads `invoices.csv` via pandas |
-| 🕐 Overdue Detection | Dynamically calculated from current date |
-| 🎚️ Tone Escalation | 5-stage engine (Friendly → Legal Review) |
-| 🤖 AI Email Generation | GPT-4o-mini via LangChain |
-| 📧 Dry-Run Mode | Simulates send, no real emails dispatched |
-| 📝 Audit Trail | Full JSON logs per run |
-| ⛔ Escalation Cap | Accounts >30d flagged, not emailed |
-| 🖥️ Streamlit UI | Interactive dashboard with KPI cards |
+|  Data Ingestion | Reads `invoices.csv` via pandas |
+|  Overdue Detection | Dynamically calculated from current date |
+|  Tone Escalation | 5-stage engine (Friendly → Legal Review) |
+|  AI Email Generation | GPT-4o-mini via LangChain |
+|  Dry-Run Mode | Simulates send, no real emails dispatched |
+|  Audit Trail | Full JSON logs per run |
+|  Escalation Cap | Accounts >30d flagged, not emailed |
+|  Streamlit UI | Interactive dashboard with KPI cards |
 
 ---
 
-## 🏗️ Architecture Flow
+## Architecture Flow
 
 ```mermaid
 flowchart TD
-    A[🗂️ invoices.csv] --> B[invoice_processor.py]
+    A[invoices.csv] --> B[invoice_processor.py]
     B --> C{Is Invoice Overdue?}
     C -- No --> D[Skip]
     C -- Yes --> E[escalation_engine.py]
@@ -45,7 +45,7 @@ flowchart TD
     F -- 8-14d --> H[Stage 2: Polite but Firm]
     F -- 15-21d --> I[Stage 3: Formal & Serious]
     F -- 22-30d --> J[Stage 4: Stern & Urgent]
-    F -- >30d --> K[Stage 5: ⛔ Flag for Review]
+    F -- >30d --> K[Stage 5: Flag for Review]
     G & H & I & J --> L[email_generator.py]
     L --> M[GPT-4o-mini via LangChain]
     M --> N[Personalized Email]
@@ -58,7 +58,7 @@ flowchart TD
 
 ---
 
-## 🚀 Setup Instructions
+##  Setup Instructions
 
 ### 1. Clone the repository
 
@@ -112,7 +112,7 @@ The dashboard opens at `http://localhost:8501` in your browser.
 ### Steps in the UI:
 1. Verify the CSV path in the sidebar (default: `data/invoices.csv`).
 2. Review the invoice preview table.
-3. Click **"🚀 Run Follow-Up Agent"**.
+3. Click **" Run Follow-Up Agent"**.
 4. View generated emails, escalated accounts, and the audit log.
 
 ---
@@ -150,7 +150,7 @@ finance-followup-agent/
 
 ---
 
-## 🤖 LLM Choice Justification: GPT-4o-mini
+##  LLM Choice Justification: GPT-4o-mini
 
 | Criterion | Justification |
 |---|---|
@@ -162,7 +162,7 @@ finance-followup-agent/
 
 ---
 
-## 🛠️ Agent Framework Justification: LangChain
+##  Agent Framework Justification: LangChain
 
 | Criterion | Justification |
 |---|---|
@@ -175,7 +175,7 @@ LangChain was chosen for its clean abstraction over raw OpenAI API calls and its
 
 ---
 
-## 💡 Prompt Design & Iteration History
+##  Prompt Design & Iteration History
 
 ### Final Prompt Structure
 
@@ -221,7 +221,7 @@ The prompt in `prompts/email_prompt.txt` follows a **structured instruction** pa
 
 ---
 
-## 🔒 Security Mitigations
+##  Security Mitigations
 
 ### 1. Prompt Injection
 - All user-supplied CSV values are passed through `sanitize_text()` in `utils/helpers.py`.
@@ -254,7 +254,7 @@ The prompt in `prompts/email_prompt.txt` follows a **structured instruction** pa
 
 ---
 
-## 📸 Sample Output Screenshots
+##  Sample Output Screenshots
 
 > _Screenshots from a live run of the application:_
 
@@ -269,7 +269,7 @@ The prompt in `prompts/email_prompt.txt` follows a **structured instruction** pa
 
 ---
 
-## 🧪 Running Without an API Key (Demo Mode)
+##  Running Without an API Key (Demo Mode)
 
 If `OPENAI_API_KEY` is not set or is the placeholder value, the agent automatically falls back to **demo mode**:
 - Realistic template emails are generated per escalation stage.
@@ -278,7 +278,7 @@ If `OPENAI_API_KEY` is not set or is the placeholder value, the agent automatica
 
 ---
 
-## 📝 8-Slide Presentation Outline
+##  8-Slide Presentation Outline
 
 ### Slide 1: Title
 **AI Finance Credit Follow-Up Email Agent**
@@ -321,4 +321,4 @@ Internship Project Submission | [Your Name] | [Date]
 
 ---
 
-*Built with ❤️ using Python · Streamlit · LangChain · OpenAI GPT-4o-mini*
+*Built using Python · Streamlit · LangChain · OpenAI GPT-4o-mini*
