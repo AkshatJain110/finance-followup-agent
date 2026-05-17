@@ -1,3 +1,5 @@
+Live Demo: https://finance-followup-agent-8gg9gbhnlblatpumvesnsa.streamlit.app
+
 # Finance Follow-Up Email Agent 
 
 > An AI-powered prototype that automatically detects overdue invoices, determines escalation urgency, and generates personalized follow-up emails using GPT-4o-mini — all without sending a single real email.
